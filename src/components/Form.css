@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inputText {
+	width: 15rem;
+	height: 2rem;
+	border: none;
+	outline: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-radius: 0.2rem;
+}
+.plusButton {
+	outline: none;
+	border: none;
+	border-radius: 0.2rem;
+	margin: 0;
+	font-size: 2.3rem;
+	padding: 0;
+	background: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all smooth 0.3s;
+	color: rgb(92, 85, 85);
+}
+
+.plusButton:hover {
+	transform: scale(1.1);
+	color: rgb(66, 110, 66);
+}
+.select {
+	margin-left: 0.5rem;
+	position: relative;
+}
+
+.select::after {
+	content: '\f0fe';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	color: rgb(92, 85, 85);
+	font-size: 2.3rem;
+	position: absolute;
+	background-color: #f2c4ba;
+	right: 0;
+	top: -4px;
+	transition: all smooth 0.3s;
+	pointer-events: none;
+}
+.select:hover::after {
+	content: '\f0fe';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	outline: none;
+	border: none;
+	border-radius: 0.2rem;
+	margin: 0;
+	font-size: 2.3rem;
+	padding: 0;
+	background: #f2c4ba;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	right: 0;
+	top: -4px;
+	transform: scale(1.1);
+	color: rgb(66, 110, 66);
+}
+
+.todoFilter {
+	width: 6rem;
+	height: 2rem;
+	border-radius: 0.2rem;
+	outline: none;
+	border: none;
+	appearance: none;
+	position: relative;
+}
