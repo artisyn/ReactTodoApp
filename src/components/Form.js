@@ -1,10 +1,31 @@
 import React from 'react';
 import './Form.css';
-const Form = () => {
+const Form = ({ inputText, setInputText, todos, setTodos }) => {
+	const inputTextHandler = (e) => {
+		setInputText(e.target.value);
+	};
+	const submitTodoHandler = (e) => {
+		e.preventDefault();
+		setTodos([
+			...todos,
+			{ text: inputText, completed: false, id: Math.random() * 1000 },
+		]);
+	};
+
 	return (
 		<form className="form" action="">
-			<input type="text" className="inputText" name="" id="" />
-			<button type="submit" className="plusButton">
+			<input
+				onChange={inputTextHandler}
+				type="text"
+				className="inputText"
+				name=""
+				id=""
+			/>
+			<button
+				onClick={submitTodoHandler}
+				type="submit"
+				className="plusButton"
+			>
 				<i className="fas fa-plus-square"></i>
 			</button>
 			<div className="select">
@@ -18,3 +39,4 @@ const Form = () => {
 	);
 };
 export default Form;
+// 32 min
