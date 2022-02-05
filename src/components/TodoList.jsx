@@ -8,6 +8,9 @@ const TodoList = ({ todos, setTodos }) => {
 			{todos.map((todo) => {
 				return (
 					<Todo
+						id={todo.id}
+						todos={todos}
+						setTodos={setTodos}
 						text={todo.text}
 						key={todo.id}
 						completed={todo.completed}

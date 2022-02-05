@@ -24,3 +24,7 @@
 	justify-content: flex-start;
 	padding-left: 1rem;
 }
+.completed {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
