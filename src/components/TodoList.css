@@ -9,12 +9,18 @@
 	align-items: center;
 	justify-content: center;
 	margin: 1rem auto;
+	flex-direction: column;
 }
 
 .todoList {
-	margin-top: 1rem;
 	width: 100%;
 	min-height: 2rem;
 	border: 1px solid black;
+	border-radius: 0.2rem;
 	background-color: rgb(135, 136, 138);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 1rem;
 }

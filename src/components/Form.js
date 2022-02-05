@@ -10,11 +10,13 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
 			...todos,
 			{ text: inputText, completed: false, id: Math.random() * 1000 },
 		]);
+		setInputText('');
 	};
 
 	return (
 		<form className="form" action="">
 			<input
+				value={inputText}
 				onChange={inputTextHandler}
 				type="text"
 				className="inputText"
