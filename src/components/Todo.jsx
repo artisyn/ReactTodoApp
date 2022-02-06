@@ -1,9 +1,10 @@
 import React from 'react';
 import './Todo.css';
 
-const Todo = ({ todos, setTodos, text, id, completed }) => {
+const Todo = ({ todos, setTodos, text, id, completed, todo }) => {
 	const deleteHandler = (e) => {
 		setTodos(todos.filter((el) => +el.id !== +e.target.parentElement.id));
+		// localStorage.removeItem(`${e.target.parentElement.id}`);
 	};
 	const completeHandler = (e) => {
 		setTodos(
@@ -14,6 +15,7 @@ const Todo = ({ todos, setTodos, text, id, completed }) => {
 			})
 		);
 	};
+
 	return (
 		<div className="todo" id={id}>
 			<li className={`todoList ${completed === true ? 'completed' : ''}`}>
